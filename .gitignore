@@ -103,5 +103,5 @@ ENV/
 # sqlite db
 dev-db.sqlite3
 
-# virtualenv
-env/
+# pycharm
+.idea/
