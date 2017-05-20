@@ -99,3 +99,9 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# sqlite db
+dev-db.sqlite3
+
+# virtualenv
+env/

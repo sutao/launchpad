@@ -1,0 +1,8 @@
+Django
+django-cors-headers
+django-filter
+django-grappelli
+django-rest-swagger
+django-rest-auth
+django-allauth
+djangorestframework
