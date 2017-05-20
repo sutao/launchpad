@@ -1,6 +1,6 @@
 To start a project:
 
-1. Run `startproject <project_name>` to modify project's name to your preferred one.
+1. Run `startproject <project_name>` to modify project's name to your preferred one. [in progress]
 2. Run `make venv` to make a virtual environment.
 3. Run `source env/bin/activate` to activate the virtual environment.
 4. Run `make install` to install dependencies.

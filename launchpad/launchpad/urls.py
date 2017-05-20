@@ -16,9 +16,17 @@ urlpatterns = [
     url(r'^api/auth/', include('rest_auth.urls')),
     url(r'^api/auth/registration/', include('rest_auth.registration.urls')),
 
-    url(r'^djangostatic/(?P<path>.*)$', serve, {'document_root': settings.STATIC_ROOT}),
-    url(r'^grappelli/', include('grappelli.urls')),
-    url(r'^admin/', admin.site.urls),
-    url(r'^docs/', swagger_schema_view),
-    url(r'^$', TemplateView.as_view(template_name="index.html")),
 ]
+
+if settings.DEBUG:
+    urlpatterns += [
+        url(r'^djangostatic/(?P<path>.*)$', serve, {'document_root': settings.STATIC_ROOT}),
+        url(r'^grappelli/', include('grappelli.urls')),
+        url(r'^admin/', admin.site.urls),
+        url(r'^docs/', swagger_schema_view),
+        url(r'^$', TemplateView.as_view(template_name="debug_index.html")),
+    ]
+else:
+    urlpatterns += [
+        url(r'^$', TemplateView.as_view(template_name="prod_index.html")),
+    ]
