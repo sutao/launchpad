@@ -12,7 +12,7 @@ VERSION = 1.0
 # Basic settings
 #
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-SECRET_KEY = '@tf30izrq^m@&gw%6yqxkn=9@v2e2sgm(&s46r#23euqz*f#fn'
+SECRET_KEY = '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
 ALLOWED_HOSTS = ['*']
 ROOT_URLCONF = 'launchpad.urls'
 WSGI_APPLICATION = 'launchpad.wsgi.application'
@@ -135,7 +135,16 @@ REST_FRAMEWORK = {
     ),
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework.authentication.TokenAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
     )
+}
+
+
+#
+# Swagger settings
+#
+SWAGGER_SETTINGS = {
+    'USE_SESSION_AUTH': False,
 }
 
 
